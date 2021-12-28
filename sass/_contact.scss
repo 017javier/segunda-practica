@@ -1,0 +1,43 @@
+.footer{
+    padding: 20px 0;
+    background: $colorclaro;
+    .title__footer{
+        color: $colorazul;
+        background: $colorgris;
+        font-size: 2.5rem;
+        font-family: $font;
+        text-align: center;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer--container{
+        padding: 100px 0;
+        width: 90%;
+        margin: auto;
+        .contect--footer{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .footer--cards{
+                width: 350px;
+                height: 350px;
+                margin: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0px;
+                background: linear-gradient(145deg, #141e61, $colorgb);
+                border: 1px solid $colorazul;
+                cursor: pointer;
+                .icon-fab{
+                    font-size: 8rem;
+                    color: #141e61;
+                    
+                    
+                }
+            }
+        }
+    }
+}

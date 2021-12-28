@@ -1,0 +1,159 @@
+@import 'variable';
+@import 'about';
+@import 'service';
+@import 'works';
+@import 'contact';
+
+html{
+    box-sizing: border-box;
+}
+*,*::after, *::before{
+    box-sizing: inherit;
+}
+body{
+    background-color: $colorclaro;
+    font-family: $font;
+    font-size: 14px;
+}
+// ---header----
+.header{
+    width: 100%;
+    background: $colorgris;
+    .header__caja{
+        margin: 0 25px;
+        
+        .header__wrapper{
+            margin: 0 auto;
+            height: 100px;
+            display:flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            max-width: 1200px;
+            .header__logo{
+                h2{
+                    text-transform: uppercase;
+                    color: #fff;
+                }
+            }
+            .menu{
+                display: inline;
+                
+                .menu__link{
+                    padding: 0 1rem;
+                    text-decoration: none;
+                    color: #fff;
+                    display: inline-block;
+                    font-size: 1rem;
+                    &:hover{
+                        color: $colorazul;
+                        transition: all 0.3s;
+                        transform: scale(1.2)
+                    }
+                }
+                .menu__link--azul{
+                    color: $colorazul;
+                }
+            }
+        }
+    }
+}
+// ---portada principal-----
+.hero{
+    margin: auto;
+    background-color: $colorclaro;
+    width: 90%;
+    .hero--containers{
+        display: flex;
+        justify-content: center;
+        height: 800px;
+        .hero__card{
+            max-width: 400px;
+            .hero-col-texto{
+                .hero-texto{
+                    padding: 1em 1em;
+                    .hero__titles{
+                        font-weight: 700;
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-size: 2.7rem;
+                        margin: auto;
+                    }
+                    .hero__sub__titles{
+                        color: $colorazul;
+                        font-weight: 400;
+                        font-size: 1.5rem;
+                        padding-bottom: 26px;
+                    }
+                    .hero__btn{
+                        margin: 10px 0;
+                        width: 180px;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        padding: 15px 30px;
+                        color: $colorazul;
+                        font-family: $font;
+                        border: 2px solid $colorazul;
+                        cursor: pointer;
+                        background-color: $colorclaro;
+                        &:hover{
+                            transition: 0.3s ease;
+                            color: $coloroscuro;
+                            background-color: #fff;
+                            border:2px solid $colorclaro;
+                        }
+                    }
+                }
+            }
+            .hero-col-img{
+                background-image: url('../img/lapto-portada.svg');
+                height: 550px;
+                background-repeat: no-repeat;
+                background-position: center;
+                animation: bouncetop-1 3s ease infinite;
+            }
+            
+        }
+    }
+}
+/* animacion */
+@keyframes bouncetop-1 {
+    0%,100% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+
+}
+/* media query */
+@media (min-width: 768px){
+    .hero{
+        margin-top: 0;
+        margin-bottom: 0;
+        .hero--containers{
+            // height: 100vh;
+            align-items: center;
+            .hero__card{
+                display: flex;
+                max-width: 1200px;
+                max-height: 700px;
+                .hero-col-texto{
+                    order: 1;
+                    flex: 1;
+                    .hero-texto{
+                        .hero__titles{
+                            font-size: 4rem;
+                        }
+                    }
+                }
+                .hero-col-img{
+                    order: 2;
+                    flex: 1;
+                    // height: auto;
+                    width: 400px;
+                }
+            }
+        }
+    }
+}
